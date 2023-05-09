@@ -1,0 +1,30 @@
+repos:
+    - repo: "https://github.com/pre-commit/pre-commit-hooks"
+      rev: v4.4.0
+      hooks:
+          - id: check-yaml
+          - id: end-of-file-fixer
+          - id: trailing-whitespace
+    - repo: "https://github.com/nbQA-dev/nbQA"
+      rev: 1.7.0
+      hooks:
+          - id: nbqa-black
+            args: [--line-length=79, --target-version=py310]
+            additional_dependencies: [black]
+          - id: nbqa-pyupgrade
+            args: [--py310-plus]
+            additional_dependencies: [pyupgrade]
+          - id: nbqa-isort
+            args: [--profile=black]
+            additional_dependencies: [isort]
+
+ci:
+    autofix_commit_msg: |
+        [pre-commit.ci] auto fixes from pre-commit.com hooks
+        for more information, see https://pre-commit.ci
+    autofix_prs: true
+    autoupdate_branch: ""
+    autoupdate_commit_msg: "[pre-commit.ci] pre-commit autoupdate"
+    autoupdate_schedule: weekly
+    skip: []
+    submodules: false
