@@ -2,7 +2,10 @@
 name = "cancer-predict"
 version = "0.1.0"
 description = "ML Model to predict wheter Cancer Cells are benign or malignant"
-authors = ["Edson Pimenta <dev.eddyyxxyy@gmail.com>"]
+authors = [
+    "Raul Bardela <raul_bardela@hotmail.com>",
+    "Edson Pimenta <dev.eddyyxxyy@gmail.com>"
+]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "cancer_predict"}]
