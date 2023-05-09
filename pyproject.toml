@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "cancer-predict"
+version = "0.1.0"
+description = "ML Model to predict wheter Cancer Cells are benign or malignant"
+authors = [
+    "Raul Bardela <raul_bardela@hotmail.com>",
+    "Edson Pimenta <dev.eddyyxxyy@gmail.com>"
+]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "cancer_predict"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyter = "^1.0.0"
+ipykernel = "^6.23.0"
+pandas = "^2.0.1"
+seaborn = "^0.12.2"
+numpy = "^1.24.3"
+plotly = "^5.14.1"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.1"
+nbqa = {extras = ["toolchain"], version = "^1.7.0"}
+
+[tool.nbqa.addopts]
+black = ["--line-length=85"]
+isort = ["--profile=black"]
+pyupgrade = ["--py310-plus"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
