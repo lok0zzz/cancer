@@ -2,3 +2,8 @@
     - Foram encontrados outliers em diversas colunas, seu tratamento será possivelmente será com a padronização dos dados utlizando o
     RobustScaler do SKL para não se afetar com outliers.
     - Foi removida a coluna: 'Unnamed 32' por não possuir nenhum valor não-nulo.
+
+[10/05/2023] Raul:
+    - Com base nesse dataset, somente 37,3% dos pacients possuia um tumor maligno.
+    - Colunas interessantes para os modelos: radius_mean, perimeter_mean, area_mean, compactness_mean
+    concavity_mean, concave points_mean porém deve-se estudar mais sobre possiveis features.
